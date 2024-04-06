@@ -1,0 +1,32 @@
+.Modal {
+  position: fixed; /* Changed to fixed to ensure it stays in place even on scroll */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the modal on the page */
+  width: auto; /* Adjusts width based on content, with padding */
+  max-width: 90vw; /* Ensures modal doesn't exceed the viewport */
+  max-height: 90vh; /* Ensures modal doesn't exceed the viewport height */
+  padding: 20px; /* Provides padding inside the modal */
+  background-color: var(--color-bg-light); /* Uses variable for consistency */
+  border-radius: 8px; /* Softens edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle shadow for depth */
+  overflow: auto; /* Allows scrolling within the modal if content is too large */
+  z-index: 1000; /* Ensures modal is above other content */
+}
+
+.containerImg {
+  max-width: 70vw; /* Limits image container width to 70% of the viewport width */
+  max-height: 70vh; /* Limits image container height to 70% of the viewport height */
+  display: flex; /* Enables flexible layouts inside the container */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  overflow: hidden; /* Ensures no overflow outside the container */
+}
+
+.Modal .imgModal {
+  max-width: 100%; /* Ensures image doesn't exceed container width */
+  max-height: 100%; /* Ensures image doesn't exceed container height */
+  border-radius: 8px; /* Consistent with modal border radius */
+  object-fit: contain; /* Ensures image aspect ratio is maintained without cropping */
+}
+

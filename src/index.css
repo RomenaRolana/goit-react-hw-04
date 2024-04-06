@@ -1,0 +1,92 @@
+:root {
+  --font-primary: "Roboto", sans-serif;
+  --color-text-light: #F0F4F8;
+  --color-text-dark: #102A43;
+  --color-bg-light: #FAFAFA; /* Оновлено для кращої видимості */
+  --color-bg-dark: #263238; /* Темніший відтінок для підвищення контрастності */
+  --color-link: #FF5252; /* Яскравіший відтінок для кращої видимості */
+  --color-link-hover: #FF1744; /* Темніший для ефекту наведення */
+  --color-button-bg: #FF5252; /* Узгоджено з кольором посилань */
+
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: var(--color-text-light);
+  background-color: var(--color-bg-dark);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-link);
+  text-decoration: none; /* Змінено для чистішого вигляду */
+}
+
+a:hover, a:focus {
+  color: var(--color-link-hover);
+  text-decoration: underline; /* Додано для кращого візуального ефекту */
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 20px;
+  transition: background-color 0.25s, color 0.25s; /* Плавний перехід для тем */
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin: 0 0 20px 0; /* Додано відступи для кращого розділення тексту */
+  transition: color 0.25s; /* Плавний перехід для кольору */
+}
+
+button {
+  border-radius: 4px;
+  border: 2px solid transparent;
+  padding: 0.75em 1.5em;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: var(--font-primary);
+  background-color: var(--color-button-bg);
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+}
+
+button:hover, button:focus {
+  background-color: var(--color-link-hover);
+  border-color: var(--color-text-light); /* Додано для підкреслення ефекту наведення */
+}
+
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--color-text-dark);
+    background-color: var(--color-bg-light);
+  }
+
+  a:hover, a:focus {
+    color: #FF1744;
+  }
+
+  button {
+    background-color: #FFCDD2; /* Світліший фон для кращої видимості у світлому режимі */
+    color: var(--color-text-dark);
+  }
+}
+
+/* Респонсивність для галереї та модальних вікон, якщо потрібно, може бути додана тут */
+
+

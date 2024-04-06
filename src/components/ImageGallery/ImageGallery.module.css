@@ -1,0 +1,35 @@
+.galleryList {
+  width: 1440px; /* Adjusting to a standard width, consider using max-width for responsiveness */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* This will evenly space the gallery items across the container */
+  gap: 20px; /* Provides space between items without having to use margins on individual items */
+  padding: 20px; /* Adds padding around the entire gallery for better spacing from the container edges */
+  margin: auto; /* Centers the gallery list if it's smaller than the parent container */
+}
+
+.galleryListItem {
+  flex: 1; /* Allows items to grow and fill the space, consider setting a basis if you want minimum sizes */
+  display: flex;
+  flex-direction: column; /* Stacks items vertically within each list item */
+  gap: 10px; /* Maintains spacing between elements inside each item */
+  max-width: calc(33.333% - 20px); /* Targets roughly three items per row, adjusting gap as necessary */
+}
+
+@media (max-width: 1024px) {
+  .galleryList {
+    width: auto; /* Allows the gallery to adapt to smaller viewports */
+    max-width: 100%; /* Prevents the gallery from exceeding the viewport width */
+    padding: 10px; /* Reduces padding for smaller screens */
+  }
+
+  .galleryListItem {
+    max-width: calc(50% - 20px); /* Adjusts to two items per row for tablet and smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .galleryListItem {
+    max-width: 100%; /* Allows each item to take full width on very small screens */
+  }
+}
