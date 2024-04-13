@@ -13,4 +13,5 @@ npm install clsx
 npm install react-modal 
 npm install react-hot-toast 
 npm install react-loader-spinner 
-
+npm install react-router-dom
+npm install axios
